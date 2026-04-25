@@ -1,0 +1,2 @@
+source: convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__curious4.t2__p18666_edge_closing_0@0.txt
+no_model_found_within_local_search_budget

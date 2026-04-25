@@ -1,0 +1,32 @@
+source: convert_data/benchmarks/QF_NIA/LassoRanker/Et4_false-termination.c_Iteration1_Lasso+nonterminationTemplate_0@2.txt
+objective(honda_ULTIMATE.start_main_~a~2) = -100000000
+sat
+
+reduced-model:
+(model
+  (define-fun gev_ULTIMATE.start_main_~c~20 () Int 0)
+  (define-fun lambda0 () Int 0)
+  (define-fun nu0 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~c~21 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~r~20 () Int (- 1))
+  (define-fun gev_ULTIMATE.start_main_~r~21 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~a~20 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~a~21 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_#t~nondet30 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~b~20 () Int 10)
+  (define-fun gev_ULTIMATE.start_main_~b~21 () Int 0)
+  (define-fun lambda1 () Int 0)
+  (define-fun nu1 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~c~22 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~r~22 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~a~22 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_#t~nondet31 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~b~22 () Int 0)
+  (define-fun lambda2 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_#t~nondet32 () Int 0)
+  (define-fun honda_ULTIMATE.start_main_~r~2 () Int 0)
+  (define-fun honda_ULTIMATE.start_main_~c~2 () Int (- 100000000))
+  (define-fun honda_ULTIMATE.start_main_~a~2 () Int (- 100000000))
+  (define-fun honda_ULTIMATE.start_main_#t~nondet3 () Int (- 1))
+  (define-fun honda_ULTIMATE.start_main_~b~2 () Int 0)
+)

@@ -1,0 +1,18 @@
+source: convert_data/benchmarks/QF_NIA/leipzig/term-GPalmJ@0.txt
+objective(n50) = -1
+sat
+
+reduced-model:
+(model
+  (define-fun n3 () Int 1)
+  (define-fun n7 () Int 0)
+  (define-fun n14 () Int 0)
+  (define-fun n5 () Int 0)
+  (define-fun n51 () Int 1)
+  (define-fun n54 () Int 0)
+  (define-fun n27 () Int 1)
+  (define-fun n29 () Int 0)
+  (define-fun n0 () Int 0)
+  (define-fun n1 () Int 0)
+  (define-fun n21 () Int 1)
+)

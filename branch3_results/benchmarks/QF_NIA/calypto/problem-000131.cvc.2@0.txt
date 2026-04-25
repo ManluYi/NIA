@@ -1,0 +1,15 @@
+source: convert_data/benchmarks/QF_NIA/calypto/problem-000131.cvc.2@0.txt
+objective(dz) = 1
+sat
+
+reduced-model:
+(model
+  (define-fun P_2 () Int 0)
+  (define-fun P_3 () Int 0)
+  (define-fun P_4 () Int 0)
+  (define-fun P_5 () Int 0)
+  (define-fun P_6 () Int 0)
+  (define-fun P_7 () Int 0)
+  (define-fun P_8 () Int 0)
+  (define-fun P_9 () Int 0)
+)

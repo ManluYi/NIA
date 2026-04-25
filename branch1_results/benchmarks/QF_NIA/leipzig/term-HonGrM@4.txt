@@ -1,0 +1,18 @@
+source: convert_data/benchmarks/QF_NIA/leipzig/term-HonGrM@4.txt
+objective(n7) = 0
+sat
+
+reduced-model:
+(model
+  (define-fun n21 () Int 5073756)
+  (define-fun n30 () Int 971947)
+  (define-fun n1 () Int 0)
+  (define-fun n57 () Int 0)
+  (define-fun n56 () Int 0)
+  (define-fun n5 () Int 0)
+  (define-fun n3 () Int 0)
+  (define-fun n8 () Int 0)
+  (define-fun n24 () Int 1)
+  (define-fun n23 () Int 0)
+  (define-fun n7 () Int 0)
+)

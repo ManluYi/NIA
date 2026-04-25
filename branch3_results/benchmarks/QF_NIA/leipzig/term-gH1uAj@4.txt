@@ -1,0 +1,30 @@
+source: convert_data/benchmarks/QF_NIA/leipzig/term-gH1uAj@4.txt
+objective(n100) = -1
+sat
+
+reduced-model:
+(model
+  (define-fun n0 () Int 0)
+  (define-fun n1 () Int 0)
+  (define-fun n2 () Int 0)
+  (define-fun n4 () Int 0)
+  (define-fun n5 () Int 0)
+  (define-fun n184 () Int 0)
+  (define-fun n8 () Int 0)
+  (define-fun n14 () Int 0)
+  (define-fun n15 () Int 0)
+  (define-fun n160 () Int 0)
+  (define-fun n17 () Int 0)
+  (define-fun n165 () Int 0)
+  (define-fun n9 () Int 0)
+  (define-fun n161 () Int 0)
+  (define-fun n21 () Int 0)
+  (define-fun n78 () Int 0)
+  (define-fun n80 () Int 0)
+  (define-fun n16 () Int 0)
+  (define-fun n20 () Int 0)
+  (define-fun n84 () Int 0)
+  (define-fun n85 () Int 0)
+  (define-fun n10 () Int 0)
+  (define-fun n11 () Int 0)
+)
