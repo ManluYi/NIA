@@ -1,6 +1,5 @@
 #include "nia_ls.h"
 
-#include <csignal>
 #include <cstdint>
 #include <fstream>
 #include <iostream>
@@ -86,6 +85,7 @@ std::string load_problem_from_file(nia::ls_solver& solver, const std::string& fi
     }
 
     solver.build_instance(clause_vec);
+    solver.print_formula();
 
     bool in_objectives = false;
     while (std::getline(fin, line)) {
@@ -131,9 +131,7 @@ std::vector<std::string> collect_all_variable_names(nia::ls_solver& solver) {
 int main(int argc, char* argv[]) {
     std::string input_path = "./a.txt";
     int seed = 1;
-
-    std::signal(SIGTERM, nia::request_stop);
-    std::signal(SIGINT, nia::request_stop);
+    std::uint64_t max_step = 10000;
 
     if (argc >= 2) {
         const std::string arg1 = argv[1];
@@ -146,14 +144,16 @@ int main(int argc, char* argv[]) {
         seed = std::stoi(argv[2]);
     }
     if (argc >= 4) {
+        max_step = static_cast<std::uint64_t>(std::stoull(argv[3]));
+    }
+    if (argc >= 5) {
         std::cerr << "too many arguments\n";
         return 1;
     }
 
     try {
-        nia::ls_solver solver(seed);
+        nia::ls_solver solver(seed, max_step, false, false);
         const std::string objective_name = load_problem_from_file(solver, input_path);
-        const bool objective_enabled = !objective_name.empty() && solver.configure_objective(objective_name, true);
 
         std::cout << "source: " << input_path << "\n";
 
@@ -178,9 +178,6 @@ int main(int argc, char* argv[]) {
             std::string objective_value;
             solver.print_var_solution(query_name, objective_value);
             std::cout << "objective(" << objective_name << ") = " << objective_value << "\n";
-            if (!objective_enabled) {
-                std::cerr << "warning: objective is present but could not be tightened during local search\n";
-            }
         }
 
         std::cout << "sat\n";

@@ -1,1 +1,0 @@
-source: convert_data/benchmarks/QF_NIA/calypto/problem-005140.cvc.1@4.txt

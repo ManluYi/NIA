@@ -1,2 +1,0 @@
-source: convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__consts4nt.t2_fixed__p18224_terminationG_0@4.txt
-no_model_found_within_local_search_budget

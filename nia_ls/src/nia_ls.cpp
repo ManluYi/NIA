@@ -3,18 +3,6 @@
 #define LS_DEBUG
 namespace nia{
 
-namespace {
-volatile sig_atomic_t g_stop_requested = 0;
-}
-
-void request_stop(int){
-    g_stop_requested = 1;
-}
-
-bool stop_requested(){
-    return g_stop_requested != 0;
-}
-
 //random walk
 void ls_solver::update_clause_weight(){
     for(int i=0;i<unsat_clauses->size();i++){
@@ -110,61 +98,6 @@ void ls_solver::random_walk(){
 }
 
 //basic operations
-bool ls_solver::configure_objective(const std::string &var_name,bool minimize){
-    _has_objective=false;
-    _objective_var_name=var_name;
-    _objective_minimize=minimize;
-    _objective_reduced_var_idx=UINT64_MAX;
-    _objective_scale=1;
-    _has_best_feasible_solution=false;
-    if(var_name.empty()){return false;}
-    if(name2var.find(var_name)!=name2var.end()){
-        _objective_reduced_var_idx=name2var[var_name];
-    }
-    else if(name2tmp_var.find(var_name)!=name2tmp_var.end()){
-        int tmp_var_idx=(int)name2tmp_var[var_name];
-        int root_tmp_var_idx=find(tmp_var_idx);
-        const std::string &root_name=_tmp_vars[root_tmp_var_idx].var_name;
-        if(name2var.find(root_name)==name2var.end()){return false;}
-        _objective_reduced_var_idx=name2var[root_name];
-        _objective_scale=fa_coff[tmp_var_idx];
-    }
-    else{
-        return false;
-    }
-    if(_objective_reduced_var_idx>=_vars.size()||!_vars[_objective_reduced_var_idx].is_nia){return false;}
-    _has_objective=true;
-    return true;
-}
-
-bool ls_solver::current_var_value(const std::string &var_name,__int128_t &var_value){
-    if(name2var.find(var_name)!=name2var.end()){
-        var_value=_solution[name2var[var_name]];
-        return true;
-    }
-    if(name2tmp_var.find(var_name)!=name2tmp_var.end()){
-        int v_idx=(int)name2tmp_var[var_name];
-        int new_v_tmp_idx=find(v_idx);
-        int new_v_idx=(int)name2var[_tmp_vars[new_v_tmp_idx].var_name];
-        var_value=_solution[new_v_idx]*fa_coff[v_idx];
-        return true;
-    }
-    return false;
-}
-
-bool ls_solver::current_objective_value(__int128_t &objective_value){
-    if(!_has_objective||_objective_reduced_var_idx>=_solution.size()){return false;}
-    objective_value=_solution[_objective_reduced_var_idx]*_objective_scale;
-    return true;
-}
-
-void ls_solver::restore_best_feasible_solution(){
-    if(!_has_best_feasible_solution){return;}
-    for(uint64_t var_idx=0;var_idx<_num_vars;var_idx++){
-        _solution[var_idx]=_best_solutin[var_idx];
-    }
-}
-
 bool ls_solver::update_best_solution(){
     bool improve=false;
     if(unsat_clauses->size()<best_found_this_restart){
@@ -180,23 +113,6 @@ bool ls_solver::update_best_solution(){
         improve=true;
         best_found_cost=unsat_clauses->size();
         best_cost_time=TimeElapsed();
-    }
-    if(unsat_clauses->size()==0){
-        __int128_t objective_value=0;
-        bool has_objective_value=current_objective_value(objective_value);
-        if(!_has_objective){
-            if(!_has_best_feasible_solution){
-                _has_best_feasible_solution=true;
-                for(uint64_t var_idx=0;var_idx<_num_vars;var_idx++){_best_solutin[var_idx]=_solution[var_idx];}
-                improve=true;
-            }
-        }
-        else if(has_objective_value&&(!_has_best_feasible_solution||is_better_objective(objective_value,_best_objective_value))){
-            _has_best_feasible_solution=true;
-            _best_objective_value=objective_value;
-            for(uint64_t var_idx=0;var_idx<_num_vars;var_idx++){_best_solutin[var_idx]=_solution[var_idx];}
-            improve=true;
-        }
     }
     return improve;
 }
@@ -376,40 +292,6 @@ void ls_solver::select_best_operation_from_bool_vec(int operation_idx_bool, int 
         }
     }
 }
-
-int ls_solver::soft_objective_bonus(uint64_t var_idx,__int128_t change_value){
-    if(!_has_objective||_objective_reduced_var_idx>=_solution.size()){return 0;}
-
-    __int128_t current_objective=0;
-    if(!current_objective_value(current_objective)){return 0;}
-
-    __int128_t future_objective=current_objective;
-    if(var_idx==_objective_reduced_var_idx){
-        future_objective=current_objective+change_value*_objective_scale;
-    }
-
-    __int128_t current_metric=_objective_minimize?current_objective:-current_objective;
-    __int128_t future_metric=_objective_minimize?future_objective:-future_objective;
-    __int128_t current_penalty=current_metric;
-    __int128_t future_penalty=future_metric;
-    if(_has_best_feasible_solution){
-        __int128_t target_metric=_objective_minimize?_best_objective_value:-_best_objective_value;
-        current_penalty=std::max<__int128_t>(0,current_metric-target_metric);
-        future_penalty=std::max<__int128_t>(0,future_metric-target_metric);
-    }
-
-    __int128_t bonus=current_penalty-future_penalty;
-    const __int128_t cap=_soft_objective_bonus_cap;
-    if(bonus>cap){bonus=cap;}
-    else if(bonus<-cap){bonus=-cap;}
-    return (int)bonus*_soft_objective_alpha;
-}
-
-int ls_solver::blended_critical_score(uint64_t var_idx,__int128_t change_value){
-    const int hard_score=critical_score(var_idx, change_value);
-    return hard_score*_soft_objective_hard_weight+soft_objective_bonus(var_idx, change_value);
-}
-
 //select the best nia operation from operation_vec depending on score
 void ls_solver::select_best_operation_from_vec(int operation_idx,int &best_score,int &best_var_idx,__int128_t &best_value){
     bool BMS;
@@ -431,7 +313,7 @@ void ls_solver::select_best_operation_from_vec(int operation_idx,int &best_score
             operation_var_idx=operation_var_idx_vec[i];
         }
         future_abs_value=abs_128(_solution[operation_var_idx]+operation_change_value);
-        score=blended_critical_score(operation_var_idx,operation_change_value);
+        score=critical_score(operation_var_idx,operation_change_value);
         int opposite_direction=(operation_change_value>0)?1:0;//if the change value is >0, then means it is moving forward, the opposite direction is 1(backward)
         uint64_t last_move_step=last_move[2*operation_var_idx+opposite_direction];
         if(score>best_score||(score==best_score&&future_abs_value<best_future_abs_value)||(score==best_score&&future_abs_value==best_future_abs_value&&last_move_step<best_last_move)){
@@ -893,38 +775,17 @@ bool ls_solver::local_search(){
     int no_improve_cnt=0;
     int flipv;
     __int128_t change_value=0;
-    _has_best_feasible_solution=false;
     start = std::chrono::steady_clock::now();
     initialize();
     _outer_layer_step=1;
     for(_step=1;_step<_max_step;_step++){
         if(0==unsat_clauses->size()){
-            update_best_solution();
 #ifdef NLS_DEBUG
             std::cout<<"step:"<<_step<<"\n";
 #endif
-            if(!_has_objective){return true;}
-            int operation_idx=0;
-            const __int128_t direction=(_objective_minimize==(_objective_scale>0))?-1:1;
-            __int128_t step_size=1;
-            for(int i=0;i<8;i++){
-                insert_operation(_objective_reduced_var_idx, direction*step_size, operation_idx, false);
-                step_size*=2;
-            }
-            if(operation_idx>0){
-                int best_score(INT32_MIN),best_var_idx(-1);
-                __int128_t best_step=0;
-                select_best_operation_from_vec(operation_idx,best_score,best_var_idx,best_step);
-                if(best_var_idx!=-1){
-                    critical_move(best_var_idx, best_step);
-                    no_improve_cnt=(update_best_solution())?0:(no_improve_cnt+1);
-                    continue;
-                }
-            }
-            restore_best_feasible_solution();
-            return true;
-        }
-        if(stop_requested()){break;}
+            // check_solution();
+            // up_bool_vars();
+            return true;}
         if(_step%1000==0&&(TimeElapsed()>_cutoff)){break;}
         if(no_improve_cnt>500000){initialize();no_improve_cnt=0;}//restart
         bool time_up_bool=(no_improve_cnt_bool*_lit_in_unsat_clause_num>5*_bool_lit_in_unsat_clause_num);
@@ -945,12 +806,9 @@ bool ls_solver::local_search(){
         }
         no_improve_cnt=(update_best_solution())?0:(no_improve_cnt+1);
     }
-    if(_has_best_feasible_solution){
-        restore_best_feasible_solution();
-        return true;
-    }
     return false;
 }
 
 
 }
+
