@@ -1,0 +1,33 @@
+source: convert_data/benchmarks/QF_NIA/leipzig/term-afghHl@2.txt
+objective(n94) = -1
+sat
+
+reduced-model:
+(model
+  (define-fun n52 () Int 0)
+  (define-fun n132 () Int 0)
+  (define-fun n138 () Int 0)
+  (define-fun n2 () Int 1)
+  (define-fun n3 () Int 0)
+  (define-fun n219 () Int 0)
+  (define-fun n5 () Int 0)
+  (define-fun n4 () Int 0)
+  (define-fun n178 () Int 0)
+  (define-fun n179 () Int 0)
+  (define-fun n9 () Int 0)
+  (define-fun n32 () Int 0)
+  (define-fun n658 () Int 0)
+  (define-fun n35 () Int 0)
+  (define-fun n10 () Int 0)
+  (define-fun n11 () Int 0)
+  (define-fun n278 () Int 0)
+  (define-fun n279 () Int 0)
+  (define-fun n8 () Int 1)
+  (define-fun n679 () Int 0)
+  (define-fun n34 () Int 0)
+  (define-fun n318 () Int 0)
+  (define-fun n319 () Int 0)
+  (define-fun ( () Int 0)
+  (define-fun + () Int 0)
+  (define-fun * () Int 0)
+)

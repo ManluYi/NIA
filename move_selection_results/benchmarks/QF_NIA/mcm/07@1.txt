@@ -1,0 +1,22 @@
+source: convert_data/benchmarks/QF_NIA/mcm/07@1.txt
+objective(X8) = 7
+sat
+
+reduced-model:
+(model
+  (define-fun X7 () Int 157)
+  (define-fun X8 () Int 7)
+  (define-fun X9 () Int 867)
+  (define-fun X10 () Int 171)
+  (define-fun X11 () Int 799)
+  (define-fun S0 () Int 2)
+  (define-fun S1 () Int 1)
+  (define-fun S2 () Int 1)
+  (define-fun S3 () Int 8)
+  (define-fun S4 () Int 1024)
+  (define-fun S5 () Int 1)
+  (define-fun S6 () Int 1)
+  (define-fun S7 () Int 2)
+  (define-fun S8 () Int 4)
+  (define-fun S9 () Int 1)
+)
