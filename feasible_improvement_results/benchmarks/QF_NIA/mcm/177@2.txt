@@ -1,0 +1,16 @@
+source: convert_data/benchmarks/QF_NIA/mcm/177@2.txt
+objective(X36) = 11
+sat
+
+reduced-model:
+(model
+  (define-fun X36 () Int 11)
+  (define-fun X37 () Int 2019)
+  (define-fun X38 () Int 1051)
+  (define-fun S0 () Int 2)
+  (define-fun S1 () Int 1)
+  (define-fun S2 () Int 4)
+  (define-fun S3 () Int 1)
+  (define-fun S4 () Int 1)
+  (define-fun S5 () Int 32)
+)

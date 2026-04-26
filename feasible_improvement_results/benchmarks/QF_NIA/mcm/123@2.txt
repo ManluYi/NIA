@@ -1,0 +1,28 @@
+source: convert_data/benchmarks/QF_NIA/mcm/123@2.txt
+objective(X19) = 5
+sat
+
+reduced-model:
+(model
+  (define-fun X15 () Int 1007)
+  (define-fun X16 () Int 1957)
+  (define-fun X17 () Int 1867)
+  (define-fun X18 () Int 1727)
+  (define-fun X19 () Int 5)
+  (define-fun X20 () Int 1787)
+  (define-fun X21 () Int 299)
+  (define-fun S0 () Int 16)
+  (define-fun S1 () Int 1)
+  (define-fun S2 () Int 2)
+  (define-fun S3 () Int 1)
+  (define-fun S4 () Int 2)
+  (define-fun S5 () Int 1)
+  (define-fun S6 () Int 2)
+  (define-fun S7 () Int 1)
+  (define-fun S8 () Int 4)
+  (define-fun S9 () Int 1)
+  (define-fun S10 () Int 1)
+  (define-fun S11 () Int 16)
+  (define-fun S12 () Int 2)
+  (define-fun S13 () Int 1)
+)

@@ -1,0 +1,12 @@
+source: convert_data/benchmarks/QF_NIA/mcm/170@1.txt
+objective(S1) = 1
+sat
+
+reduced-model:
+(model
+  (define-fun X29 () Int 764)
+  (define-fun S0 () Int 1)
+  (define-fun S1 () Int 1)
+  (define-fun S2 () Int 1)
+  (define-fun S3 () Int 1)
+)
