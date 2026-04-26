@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """
 统一标准化所有 .smt2 文件：
 - 删除末尾所有可能的命令块（check-sat, get-objectives, exit, set-option ...）
