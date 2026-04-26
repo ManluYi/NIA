@@ -1,5 +1,6 @@
 #include "nia_ls.h"
 #define NLS_DEBUG
+
 namespace nia{
 //input transformation
 void ls_solver::split_string(std::string &in_string, std::vector<std::string> &str_vec,std::string pattern=" "){
