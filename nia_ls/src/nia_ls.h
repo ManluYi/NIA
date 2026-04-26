@@ -19,9 +19,10 @@
 #include <algorithm>
 
 namespace nia {
-const __int128_t max_int=__int128_t(INT64_MAX);
-void request_stop(int signum);
+void request_stop(int signal_number);
 bool stop_requested();
+
+const __int128_t max_int=__int128_t(INT64_MAX);
 //the var_index=1(_vars[1]=x), exponent=2: x^2
 struct var_exp{
     int var_index;
@@ -150,6 +151,9 @@ public:
     __int128_t                  _best_objective_value=0;
     uint64_t                    _objective_reduced_var_idx=UINT64_MAX;
     __int128_t                  _objective_scale=1;
+    int                         _soft_objective_hard_weight=128;
+    int                         _soft_objective_alpha=1;
+    int                         _soft_objective_bonus_cap=192;
     int                         no_improve_cnt_bool=0;
     int                         no_improve_cnt_nia=0;
     bool                        is_in_bool_search=false;
@@ -247,9 +251,7 @@ public:
     bool                        configure_objective(const std::string &var_name,bool minimize=true);
     bool                        current_objective_value(__int128_t &objective_value);
     bool                        current_var_value(const std::string &var_name,__int128_t &var_value);
-    bool                        tighten_objective_bound();
     void                        restore_best_feasible_solution();
-    bool                        improve_feasible_objective();
     int                         pick_critical_move(__int128_t &best_value);
     int                         pick_critical_move_bool();
     void                        critical_move(uint64_t var_idx,__int128_t change_value);
@@ -289,6 +291,8 @@ public:
     void                        up_bool_vars();
     bool                        get_lits_value(uint64_t lit_idx,const std::string & str);
     //calculate score
+    int                         soft_objective_bonus(uint64_t var_idx,__int128_t change_value);
+    int                         blended_critical_score(uint64_t var_idx,__int128_t change_value);
     int                         critical_score(uint64_t var_idx,__int128_t change_value);
     __int128_t                     critical_subscore(uint64_t var_idx,__int128_t change_value);
     //check

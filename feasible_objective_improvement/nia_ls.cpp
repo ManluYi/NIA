@@ -131,21 +131,21 @@ void ls_solver::random_walk(){
 
 //basic operations
 bool ls_solver::configure_objective(const std::string &var_name,bool minimize){
-    _has_objective=false;//是否有目标函数
-    _objective_var_name=var_name;//目标函数变量的名字
-    _objective_minimize=minimize;//是否是最小化问题
+    _has_objective=false;
+    _objective_var_name=var_name;
+    _objective_minimize=minimize;
     _objective_reduced_var_idx=UINT64_MAX;
-    _objective_scale=1;//目标函数变量的系数，默认为1，如果目标函数是max 2*x1, 那么objective_scale=2
-    _has_best_feasible_solution=false;//是否找到过可行解
-    if(var_name.empty()){return false;}//如果没有目标函数，直接返回
+    _objective_scale=1;
+    _has_best_feasible_solution=false;
+    if(var_name.empty()){return false;}
     if(name2var.find(var_name)!=name2var.end()){
-        _objective_reduced_var_idx=name2var[var_name];//如果目标函数变量在普通变量中，直接找到它的idx
+        _objective_reduced_var_idx=name2var[var_name];
     }
-    else if(name2tmp_var.find(var_name)!=name2tmp_var.end()){//如果目标函数变量在临时变量中，找到它对应的普通变量idx和系数
+    else if(name2tmp_var.find(var_name)!=name2tmp_var.end()){
         int tmp_var_idx=(int)name2tmp_var[var_name];
         int root_tmp_var_idx=find(tmp_var_idx);
         const std::string &root_name=_tmp_vars[root_tmp_var_idx].var_name;
-        if(name2var.find(root_name)==name2var.end()){return false;}//如果目标函数变量对应的普通变量不存在，返回false
+        if(name2var.find(root_name)==name2var.end()){return false;}
         _objective_reduced_var_idx=name2var[root_name];
         _objective_scale=fa_coff[tmp_var_idx];
     }

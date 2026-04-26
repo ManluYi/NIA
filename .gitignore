@@ -9,7 +9,7 @@ nia_ls/build/
 convert_sls
 z3
 data/benchmarks.tar.bz2
-results/
+solver_results/
 z3_results/
 optimathsat_results.csv
 z3_results.csv
