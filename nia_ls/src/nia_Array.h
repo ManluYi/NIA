@@ -2,7 +2,6 @@
 #define _IDL_ARRAY_H
 #include <cstring>
 #include<random>
-
 class Array
 {
 public:
