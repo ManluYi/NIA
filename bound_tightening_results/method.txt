@@ -1,0 +1,3 @@
+找到一个 SAT 解，目标值 = B
+然后继续要求 objective < B
+再重新找 SAT

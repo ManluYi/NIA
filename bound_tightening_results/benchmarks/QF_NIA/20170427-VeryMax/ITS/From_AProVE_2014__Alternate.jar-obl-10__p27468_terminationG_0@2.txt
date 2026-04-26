@@ -1,0 +1,2 @@
+source: convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_AProVE_2014__Alternate.jar-obl-10__p27468_terminationG_0@2.txt
+no_model_found_within_local_search_budget

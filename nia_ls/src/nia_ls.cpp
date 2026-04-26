@@ -3,6 +3,38 @@
 #define LS_DEBUG
 namespace nia{
 
+namespace {
+volatile sig_atomic_t stop_requested_flag = 0;
+
+__int128_t floor_div_128(__int128_t a, __int128_t b) {
+    __int128_t q = a / b;
+    __int128_t r = a % b;
+    if (r != 0 && ((r > 0) != (b > 0))) {
+        --q;
+    }
+    return q;
+}
+
+__int128_t ceil_div_128(__int128_t a, __int128_t b) {
+    __int128_t q = a / b;
+    __int128_t r = a % b;
+    if (r != 0 && ((r > 0) == (b > 0))) {
+        ++q;
+    }
+    return q;
+}
+
+}
+
+void request_stop(int signum) {
+    (void)signum;
+    stop_requested_flag = 1;
+}
+
+bool stop_requested() {
+    return stop_requested_flag != 0;
+}
+
 //random walk
 void ls_solver::update_clause_weight(){
     for(int i=0;i<unsat_clauses->size();i++){
@@ -98,6 +130,92 @@ void ls_solver::random_walk(){
 }
 
 //basic operations
+bool ls_solver::configure_objective(const std::string &var_name,bool minimize){
+    _has_objective=false;
+    _objective_var_name=var_name;
+    _objective_minimize=minimize;
+    _objective_reduced_var_idx=UINT64_MAX;
+    _objective_scale=1;
+    _has_best_feasible_solution=false;
+    if(var_name.empty()){return false;}
+    if(name2var.find(var_name)!=name2var.end()){
+        _objective_reduced_var_idx=name2var[var_name];
+    }
+    else if(name2tmp_var.find(var_name)!=name2tmp_var.end()){
+        int tmp_var_idx=(int)name2tmp_var[var_name];
+        int root_tmp_var_idx=find(tmp_var_idx);
+        const std::string &root_name=_tmp_vars[root_tmp_var_idx].var_name;
+        if(name2var.find(root_name)==name2var.end()){return false;}
+        _objective_reduced_var_idx=name2var[root_name];
+        _objective_scale=fa_coff[tmp_var_idx];
+    }
+    else{
+        return false;
+    }
+    if(_objective_reduced_var_idx>=_vars.size()||!_vars[_objective_reduced_var_idx].is_nia){return false;}
+    _has_objective=true;
+    return true;
+}
+
+bool ls_solver::current_var_value(const std::string &var_name,__int128_t &var_value){
+    if(name2var.find(var_name)!=name2var.end()){
+        var_value=_solution[name2var[var_name]];
+        return true;
+    }
+    if(name2tmp_var.find(var_name)!=name2tmp_var.end()){
+        int tmp_var_idx=(int)name2tmp_var[var_name];
+        int root_tmp_var_idx=find(tmp_var_idx);
+        const std::string &root_name=_tmp_vars[root_tmp_var_idx].var_name;
+        if(name2var.find(root_name)==name2var.end()){return false;}
+        var_value=_solution[name2var[root_name]]*fa_coff[tmp_var_idx];
+        return true;
+    }
+    return false;
+}
+
+bool ls_solver::current_objective_value(__int128_t &objective_value){
+    if(!_has_objective){return false;}
+    return current_var_value(_objective_var_name, objective_value);
+}
+
+bool ls_solver::tighten_objective_bound(){
+    if(!_has_objective||!_has_best_feasible_solution||_objective_reduced_var_idx>=_vars.size()){return false;}
+    variable *objective_var=&(_vars[_objective_reduced_var_idx]);
+    const __int128_t better_target=_objective_minimize?(_best_objective_value-1):(_best_objective_value+1);
+    __int128_t new_low_bound=objective_var->low_bound;
+    __int128_t new_upper_bound=objective_var->upper_bound;
+
+    if(_objective_minimize){
+        if(_objective_scale>0){
+            new_upper_bound=std::min(new_upper_bound, floor_div_128(better_target, _objective_scale));
+        }
+        else{
+            new_low_bound=std::max(new_low_bound, ceil_div_128(better_target, _objective_scale));
+        }
+    }
+    else{
+        if(_objective_scale>0){
+            new_low_bound=std::max(new_low_bound, ceil_div_128(better_target, _objective_scale));
+        }
+        else{
+            new_upper_bound=std::min(new_upper_bound, floor_div_128(better_target, _objective_scale));
+        }
+    }
+
+    if(new_low_bound>new_upper_bound){return false;}
+    if(new_low_bound==objective_var->low_bound&&new_upper_bound==objective_var->upper_bound){return false;}
+    objective_var->low_bound=new_low_bound;
+    objective_var->upper_bound=new_upper_bound;
+    return true;
+}
+
+void ls_solver::restore_best_feasible_solution(){
+    if(!_has_best_feasible_solution){return;}
+    for(uint64_t var_idx=0;var_idx<_num_vars;var_idx++){
+        _solution[var_idx]=_best_solutin[var_idx];
+    }
+}
+
 bool ls_solver::update_best_solution(){
     bool improve=false;
     if(unsat_clauses->size()<best_found_this_restart){
@@ -113,6 +231,18 @@ bool ls_solver::update_best_solution(){
         improve=true;
         best_found_cost=unsat_clauses->size();
         best_cost_time=TimeElapsed();
+    }
+    if(unsat_clauses->size()==0){
+        __int128_t objective_value=0;
+        bool has_objective_value=current_objective_value(objective_value);
+        if(!_has_best_feasible_solution||!has_objective_value||(_has_objective&&is_better_objective(objective_value,_best_objective_value))){
+            _has_best_feasible_solution=true;
+            if(has_objective_value){_best_objective_value=objective_value;}
+            for(uint64_t var_idx=0;var_idx<_num_vars;var_idx++){
+                _best_solutin[var_idx]=_solution[var_idx];
+            }
+            improve=true;
+        }
     }
     return improve;
 }
@@ -772,21 +902,36 @@ void ls_solver::enter_bool_mode(){
 //local search
 bool ls_solver::local_search(){
     if(build_unsat){return false;}
+    _has_best_feasible_solution=false;
     int no_improve_cnt=0;
     int flipv;
     __int128_t change_value=0;
     start = std::chrono::steady_clock::now();
+    _step=1;
     initialize();
     _outer_layer_step=1;
-    for(_step=1;_step<_max_step;_step++){
+    while(true){
+        if(stop_requested()){
+            break;
+        }
         if(0==unsat_clauses->size()){
+            update_best_solution();
 #ifdef NLS_DEBUG
             std::cout<<"step:"<<_step<<"\n";
 #endif
-            // check_solution();
-            // up_bool_vars();
-            return true;}
-        if(_step%1000==0&&(TimeElapsed()>_cutoff)){break;}
+            if(!_has_objective){
+                return true;
+            }
+            if(!tighten_objective_bound()){
+                restore_best_feasible_solution();
+                return true;
+            }
+            initialize();
+            _outer_layer_step=1;
+            no_improve_cnt=0;
+            _step++;
+            continue;
+        }
         if(no_improve_cnt>500000){initialize();no_improve_cnt=0;}//restart
         bool time_up_bool=(no_improve_cnt_bool*_lit_in_unsat_clause_num>5*_bool_lit_in_unsat_clause_num);
         bool time_up_nia=(no_improve_cnt_nia*_lit_in_unsat_clause_num>20*(_lit_in_unsat_clause_num-_bool_lit_in_unsat_clause_num));
@@ -805,10 +950,14 @@ bool ls_solver::local_search(){
             else                               no_improve_cnt_nia++;
         }
         no_improve_cnt=(update_best_solution())?0:(no_improve_cnt+1);
+        _step++;
+    }
+    if(_has_best_feasible_solution){
+        restore_best_feasible_solution();
+        return true;
     }
     return false;
 }
 
 
 }
-

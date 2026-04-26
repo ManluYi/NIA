@@ -1,0 +1,2 @@
+source: convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Stroeder_15__AliasDarteFeautrierGonnord-SAS2010-loops_true-termination.c__p20439_terminationG_0@4.txt
+no_model_found_within_local_search_budget

@@ -20,6 +20,8 @@
 
 namespace nia {
 const __int128_t max_int=__int128_t(INT64_MAX);
+void request_stop(int signum);
+bool stop_requested();
 //the var_index=1(_vars[1]=x), exponent=2: x^2
 struct var_exp{
     int var_index;
@@ -141,6 +143,13 @@ public:
     std::vector<int>            _best_literal_assignment;
     int                         best_found_cost;
     int                         best_found_this_restart;
+    bool                        _has_objective=false;
+    bool                        _objective_minimize=true;
+    bool                        _has_best_feasible_solution=false;
+    std::string                 _objective_var_name;
+    __int128_t                  _best_objective_value=0;
+    uint64_t                    _objective_reduced_var_idx=UINT64_MAX;
+    __int128_t                  _objective_scale=1;
     int                         no_improve_cnt_bool=0;
     int                         no_improve_cnt_nia=0;
     bool                        is_in_bool_search=false;
@@ -235,6 +244,11 @@ public:
     inline void                 unsat_a_clause(uint64_t clause_idx){unsat_clauses->insert_element((int)clause_idx);
                                  if(_clauses[clause_idx].bool_literals.size()>0)contain_bool_unsat_clauses->insert_element((int)clause_idx);};
     bool                        update_best_solution();
+    bool                        configure_objective(const std::string &var_name,bool minimize=true);
+    bool                        current_objective_value(__int128_t &objective_value);
+    bool                        current_var_value(const std::string &var_name,__int128_t &var_value);
+    bool                        tighten_objective_bound();
+    void                        restore_best_feasible_solution();
     int                         pick_critical_move(__int128_t &best_value);
     int                         pick_critical_move_bool();
     void                        critical_move(uint64_t var_idx,__int128_t change_value);
@@ -281,6 +295,7 @@ public:
     inline bool                 is_single_var_term(term &t){return t.var_epxs.size()==1&&t.var_epxs[0].exponent==1;}//if the term is in the form of X (single var)
     //handle 128
     inline __int128_t           abs_128(__int128_t n){return n>=0?n:-n;}
+    inline bool                 is_better_objective(__int128_t candidate,__int128_t best) const{return _objective_minimize?(candidate<best):(candidate>best);}
     std::string                 print_128(__int128 n);
     //local search
     bool                        local_search();
@@ -288,3 +303,4 @@ public:
     ~ls_solver();
 };
 }
+
