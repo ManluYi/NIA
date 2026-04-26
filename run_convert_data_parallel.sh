@@ -72,3 +72,4 @@ find "$INPUT_DIR" -type f -name '*.txt' -print0 |
     (NR - 1) % shard_count == shard_index { print }
   ' |
   xargs -0 -n 1 -P "$JOBS" bash -c 'run_one "$0"'
+

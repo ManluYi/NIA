@@ -23,3 +23,4 @@ if(MSVC)
 else()
   target_compile_options(nia_ls_main PRIVATE -O2)
 endif()
+

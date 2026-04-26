@@ -1,7 +1,6 @@
 #include"nia_ls.h"
 #include <sstream>
 #define LS_DEBUG
-
 namespace nia{
 //print
 void ls_solver::print_formula(){
