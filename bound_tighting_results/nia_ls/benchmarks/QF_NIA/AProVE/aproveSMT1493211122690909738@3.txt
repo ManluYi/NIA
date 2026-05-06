@@ -1,0 +1,8 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/AProVE/aproveSMT1493211122690909738@3.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/AProVE/aproveSMT1493211122690909738@3.txt
+warning: formula contains unsupported literals for nia::ls_solver
+no_model_found_within_local_search_budget
+
+real	20m15.003s
+user	20m14.654s
+sys	0m0.004s

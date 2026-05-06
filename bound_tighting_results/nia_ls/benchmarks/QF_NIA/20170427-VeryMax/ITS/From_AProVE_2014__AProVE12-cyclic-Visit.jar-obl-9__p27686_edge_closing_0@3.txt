@@ -1,0 +1,7 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_AProVE_2014__AProVE12-cyclic-Visit.jar-obl-9__p27686_edge_closing_0@3.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_AProVE_2014__AProVE12-cyclic-Visit.jar-obl-9__p27686_edge_closing_0@3.txt
+no_model_found_within_local_search_budget
+
+real	20m15.005s
+user	20m14.992s
+sys	0m0.001s

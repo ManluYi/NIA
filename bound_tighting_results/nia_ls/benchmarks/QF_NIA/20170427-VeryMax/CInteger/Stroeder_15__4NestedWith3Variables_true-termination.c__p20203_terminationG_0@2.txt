@@ -1,0 +1,39 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Stroeder_15__4NestedWith3Variables_true-termination.c__p20203_terminationG_0@2.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Stroeder_15__4NestedWith3Variables_true-termination.c__p20203_terminationG_0@2.txt
+objective(Nl2main_q2) = -4
+sat
+
+reduced-model:
+(model
+  (define-fun Nl2main_a1 () Int 0)
+  (define-fun Nl2main_b1 () Int (- 1))
+  (define-fun Nl2main_q1 () Int 4)
+  (define-fun Nl2main_a2 () Int 2)
+  (define-fun Nl2main_b2 () Int 1)
+  (define-fun Nl2main_q2 () Int (- 4))
+  (define-fun lam8n1 () Int 1)
+  (define-fun lam8n2 () Int 1)
+  (define-fun lam6n1 () Int 0)
+  (define-fun lam6n2 () Int 0)
+  (define-fun Nl2CT1 () Int (- 3))
+  (define-fun lam7n1 () Int 1)
+  (define-fun Nl2CT2 () Int 6)
+  (define-fun lam7n2 () Int 1)
+  (define-fun lam5n1 () Int 2)
+  (define-fun lam5n2 () Int 2)
+  (define-fun RFN1_CT () Int 95567355)
+  (define-fun undef4 () Int 1)
+  (define-fun lam2n1 () Int 8)
+  (define-fun lam2n2 () Int 3)
+  (define-fun lam0n0 () Int 2)
+  (define-fun lam0n1 () Int 0)
+  (define-fun lam0n2 () Int 0)
+  (define-fun lam1n1 () Int 3)
+  (define-fun lam1n2 () Int 0)
+  (define-fun undef5 () Int (- 2))
+  (define-fun undef6 () Int 1)
+)
+
+real	0m2.538s
+user	0m2.537s
+sys	0m0.000s
