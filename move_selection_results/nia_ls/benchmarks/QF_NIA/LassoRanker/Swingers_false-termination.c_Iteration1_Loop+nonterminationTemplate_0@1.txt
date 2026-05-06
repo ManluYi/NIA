@@ -1,0 +1,29 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/LassoRanker/Swingers_false-termination.c_Iteration1_Loop+nonterminationTemplate_0@1.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/LassoRanker/Swingers_false-termination.c_Iteration1_Loop+nonterminationTemplate_0@1.txt
+objective(lambda2) = 0
+sat
+
+reduced-model:
+(model
+  (define-fun gev_ULTIMATE.start_main_~temp~10 () Int 0)
+  (define-fun lambda0 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~temp~11 () Int 0)
+  (define-fun nu0 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~bob~10 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~samantha~10 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~bob~11 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~samantha~11 () Int 0)
+  (define-fun lambda1 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~temp~12 () Int 0)
+  (define-fun nu1 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~bob~12 () Int 0)
+  (define-fun gev_ULTIMATE.start_main_~samantha~12 () Int 0)
+  (define-fun lambda2 () Int 0)
+  (define-fun honda_ULTIMATE.start_main_~temp~1 () Int 0)
+  (define-fun honda_ULTIMATE.start_main_~bob~1 () Int 0)
+  (define-fun honda_ULTIMATE.start_main_~samantha~1 () Int 0)
+)
+
+real	20m15.002s
+user	20m14.658s
+sys	0m0.000s

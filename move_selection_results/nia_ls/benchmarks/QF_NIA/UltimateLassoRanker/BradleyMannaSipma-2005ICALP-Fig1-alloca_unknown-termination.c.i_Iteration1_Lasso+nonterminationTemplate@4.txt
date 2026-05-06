@@ -1,0 +1,69 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/UltimateLassoRanker/BradleyMannaSipma-2005ICALP-Fig1-alloca_unknown-termination.c.i_Iteration1_Lasso+nonterminationTemplate@4.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/UltimateLassoRanker/BradleyMannaSipma-2005ICALP-Fig1-alloca_unknown-termination.c.i_Iteration1_Lasso+nonterminationTemplate@4.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(|ray_(select) = 1
+warning: objective is present but could not be tightened during local search
+sat
+
+reduced-model:
+(model
+  (define-fun init_gcd_#t~mem9 () Int 0)
+  (define-fun honda_gcd_#t~mem9 () Int 0)
+  (define-fun bool_new_var1 () Bool true )
+  (define-fun bool_new_var2 () Bool true )
+  (define-fun bool_new_var3 () Bool false )
+  (define-fun bool_new_var4 () Bool true )
+  (define-fun bool_new_var5 () Bool true )
+  (define-fun honda_gcd_~y2 () Int 0)
+  (define-fun honda_gcd_#in~y2 () Int 0)
+  (define-fun honda_gcd_~y2_ref~2.base () Int 3)
+  (define-fun honda_gcd_#in~y1 () Int 0)
+  (define-fun honda_gcd_~y2_ref~2.offset () Int 0)
+  (define-fun honda_gcd_~y1_ref~2.offset () Int 0)
+  (define-fun old(#valid) () Int 0)
+  (define-fun gcd_~y1_ref~2.base) () Int 0)
+  (define-fun 1 () Int 0)
+  (define-fun 0) () Int 0)
+  (define-fun 0 () Int 0)
+  (define-fun honda_#NULL.base () Int 0)
+  (define-fun init_gcd_#t~mem8 () Int 0)
+  (define-fun honda_gcd_#t~mem8 () Int 0)
+  (define-fun init_gcd_#t~mem5 () Int 0)
+  (define-fun honda_gcd_#t~mem5 () Int 0)
+  (define-fun init_gcd_#t~mem7 () Int 0)
+  (define-fun honda_gcd_#t~mem7 () Int 0)
+  (define-fun init_gcd_#t~mem6 () Int 0)
+  (define-fun honda_gcd_#t~mem6 () Int 0)
+  (define-fun honda_#NULL.offset () Int 0)
+  (define-fun honda_gcd_~y1 () Int 0)
+  (define-fun init_gcd_#t~mem4 () Int 0)
+  (define-fun honda_gcd_#t~mem4 () Int 0)
+  (define-fun honda_gcd_~y1_ref~2.base () Int 2)
+  (define-fun gcd_~y2_ref~2.base) () Int 0)
+  (define-fun ray_gcd_#t~malloc1.base () Int 0)
+  (define-fun gcd_~y1_ref~2.offset) () Int 0)
+  (define-fun ray_gcd_#in~y2 () Int 0)
+  (define-fun ray_gcd_~y2_ref~2.base () Int 0)
+  (define-fun ray_gcd_~y1 () Int 0)
+  (define-fun ray_gcd_~y2 () Int 0)
+  (define-fun gcd_~y2_ref~2.offset) () Int 0)
+  (define-fun ray_gcd_~y2_ref~2.offset () Int 0)
+  (define-fun ray_gcd_#t~malloc0.base () Int 0)
+  (define-fun ray_gcd_#in~y1 () Int 0)
+  (define-fun ray_#NULL.offset () Int 0)
+  (define-fun ray_gcd_#t~malloc1.offset () Int 0)
+  (define-fun ray_gcd_#t~malloc0.offset () Int 0)
+  (define-fun ray_gcd_~y1_ref~2.base () Int 0)
+  (define-fun ray_gcd_~y1_ref~2.offset () Int 0)
+  (define-fun ray_#NULL.base () Int 0)
+  (define-fun lambda () Int 0)
+  (define-fun ray_(select () Int 0)
+  (define-fun (select () Int 0)
+  (define-fun old(#memory_int) () Int 0)
+  (define-fun ray_(ite () Int 0)
+  (define-fun old(#length) () Int 0)
+)
+
+real	0m0.045s
+user	0m0.010s
+sys	0m0.004s

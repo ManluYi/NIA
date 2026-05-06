@@ -1,2 +1,0 @@
-source: convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Ton_Chanh_15__Bangalore_v2_false-termination.c__p26620_edge_closing_0@0.txt
-no_model_found_within_local_search_budget

@@ -1,0 +1,51 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__compress.t2_fixed__p17785_terminationG_0@1.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__compress.t2_fixed__p17785_terminationG_0@1.txt
+objective(i3^0) = 50
+sat
+
+reduced-model:
+(model
+  (define-fun Nl10fcode5^01 () Int 0)
+  (define-fun Nl10hshift11^01 () Int 1)
+  (define-fun Nl10fcode5^02 () Int (- 1))
+  (define-fun Nl10hshift11^02 () Int 0)
+  (define-fun Nl10fcode5^03 () Int 0)
+  (define-fun Nl10hshift11^03 () Int 0)
+  (define-fun lam14n1 () Int 0)
+  (define-fun lam14n2 () Int 0)
+  (define-fun lam14n3 () Int 0)
+  (define-fun lam14n4 () Int 0)
+  (define-fun Nl10CT1 () Int (- 28))
+  (define-fun lam15n2 () Int 1)
+  (define-fun Nl10CT2 () Int 65536)
+  (define-fun lam15n3 () Int 1)
+  (define-fun Nl10CT3 () Int 0)
+  (define-fun lam15n4 () Int 0)
+  (define-fun lam13n2 () Int 1)
+  (define-fun lam13n3 () Int 0)
+  (define-fun lam13n4 () Int (- 1))
+  (define-fun lam16n2 () Int 0)
+  (define-fun lam16n3 () Int 0)
+  (define-fun lam16n4 () Int 0)
+  (define-fun RFN1_CT () Int 50001)
+  (define-fun lam3n1 () Int 0)
+  (define-fun lam3n2 () Int 0)
+  (define-fun lam3n3 () Int 0)
+  (define-fun lam0n0 () Int 2428)
+  (define-fun lam0n1 () Int 0)
+  (define-fun lam0n2 () Int 2428)
+  (define-fun lam0n3 () Int 5)
+  (define-fun lam2n1 () Int 0)
+  (define-fun lam2n2 () Int (- 1))
+  (define-fun lam2n3 () Int 1)
+  (define-fun lam1n1 () Int 1)
+  (define-fun lam1n2 () Int 1)
+  (define-fun lam1n3 () Int 0)
+  (define-fun i3^0 () Int 50)
+  (define-fun hsize^0 () Int 65536)
+  (define-fun block_compress^0 () Int 0)
+)
+
+real	20m15.019s
+user	20m14.399s
+sys	0m0.008s

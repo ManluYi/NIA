@@ -1,0 +1,7 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__cover.t2__p18604_edge_closing_0@1.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__cover.t2__p18604_edge_closing_0@1.txt
+no_model_found_within_local_search_budget
+
+real	20m15.094s
+user	20m8.184s
+sys	0m5.622s

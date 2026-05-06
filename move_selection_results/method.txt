@@ -1,6 +1,0 @@
-把目标值加入 move 选择的打分
-现在 local search 选择 move 主要看：
-能减少多少 unsat clauses
-可以改成：
-先减少 unsat clauses
-如果效果差不多，再选择目标值更小的 move

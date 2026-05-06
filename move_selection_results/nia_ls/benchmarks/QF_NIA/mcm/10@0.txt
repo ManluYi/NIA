@@ -1,0 +1,30 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/mcm/10@0.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/mcm/10@0.txt
+objective(S5) = 1
+sat
+
+reduced-model:
+(model
+  (define-fun X6 () Int 389)
+  (define-fun X7 () Int 303)
+  (define-fun X8 () Int 587)
+  (define-fun X9 () Int 287)
+  (define-fun X10 () Int 871)
+  (define-fun X11 () Int 763)
+  (define-fun S0 () Int 1)
+  (define-fun S1 () Int 256)
+  (define-fun S2 () Int 1)
+  (define-fun S3 () Int 2)
+  (define-fun S4 () Int 2)
+  (define-fun S5 () Int 1)
+  (define-fun S6 () Int 1)
+  (define-fun S7 () Int 16)
+  (define-fun S8 () Int 2)
+  (define-fun S9 () Int 1)
+  (define-fun S10 () Int 2)
+  (define-fun S11 () Int 1)
+)
+
+real	20m15.002s
+user	20m14.997s
+sys	0m0.004s

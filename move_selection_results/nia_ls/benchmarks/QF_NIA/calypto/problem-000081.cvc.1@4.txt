@@ -1,0 +1,27 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000081.cvc.1@4.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000081.cvc.1@4.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(P_2) = 0
+sat
+
+reduced-model:
+(model
+  (define-fun P_2 () Int 0)
+  (define-fun P_3 () Int 0)
+  (define-fun P_4 () Int 0)
+  (define-fun P_5 () Int 0)
+  (define-fun P_6 () Int 0)
+  (define-fun P_7 () Int 0)
+  (define-fun P_8 () Int 0)
+  (define-fun P_9 () Int 0)
+  (define-fun P_10 () Int 0)
+  (define-fun P_11 () Int 0)
+  (define-fun mux_I_101922 () Int 0)
+  (define-fun mux_I_101918 () Int 0)
+  (define-fun mux_I_101901 () Int 0)
+  (define-fun mux_I_101897 () Int 0)
+)
+
+real	0m0.009s
+user	0m0.003s
+sys	0m0.005s

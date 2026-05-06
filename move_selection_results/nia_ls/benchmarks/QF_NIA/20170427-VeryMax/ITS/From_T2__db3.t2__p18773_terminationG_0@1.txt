@@ -1,0 +1,7 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__db3.t2__p18773_terminationG_0@1.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__db3.t2__p18773_terminationG_0@1.txt
+no_model_found_within_local_search_budget
+
+real	20m15.019s
+user	20m13.956s
+sys	0m0.077s

@@ -1,0 +1,36 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/mcm/139@0.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/mcm/139@0.txt
+objective(X13) = 21
+sat
+
+reduced-model:
+(model
+  (define-fun X13 () Int 21)
+  (define-fun X14 () Int 651)
+  (define-fun X15 () Int 893)
+  (define-fun X16 () Int 1861)
+  (define-fun X17 () Int 87)
+  (define-fun X18 () Int 603)
+  (define-fun X19 () Int 977)
+  (define-fun X20 () Int 1057)
+  (define-fun S0 () Int 4)
+  (define-fun S1 () Int 1)
+  (define-fun S2 () Int 32)
+  (define-fun S3 () Int 1)
+  (define-fun S4 () Int 8)
+  (define-fun S5 () Int 1)
+  (define-fun S6 () Int 1)
+  (define-fun S7 () Int 2)
+  (define-fun S8 () Int 1)
+  (define-fun S9 () Int 4)
+  (define-fun S10 () Int 1)
+  (define-fun S11 () Int 16)
+  (define-fun S13 () Int 1)
+  (define-fun S12 () Int 16)
+  (define-fun S14 () Int 2)
+  (define-fun S15 () Int 1)
+)
+
+real	20m15.006s
+user	20m14.266s
+sys	0m0.009s

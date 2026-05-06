@@ -1,0 +1,15 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-005895.cvc.1@2.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-005895.cvc.1@2.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(P_2) = 0
+sat
+
+reduced-model:
+(model
+  (define-fun P_2 () Int 0)
+  (define-fun P_3 () Int 0)
+)
+
+real	0m0.008s
+user	0m0.000s
+sys	0m0.008s

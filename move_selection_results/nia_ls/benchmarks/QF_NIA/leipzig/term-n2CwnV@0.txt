@@ -1,0 +1,71 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-n2CwnV@0.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-n2CwnV@0.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(n85) = -1
+warning: objective is present but could not be tightened during local search
+sat
+
+reduced-model:
+(model
+  (define-fun n2 () Int 1)
+  (define-fun n30 () Int 0)
+  (define-fun n3 () Int 0)
+  (define-fun n31 () Int 0)
+  (define-fun n234 () Int 0)
+  (define-fun n4 () Int 0)
+  (define-fun n5 () Int 0)
+  (define-fun n8 () Int 1)
+  (define-fun n9 () Int 0)
+  (define-fun n10 () Int 0)
+  (define-fun n11 () Int 0)
+  (define-fun n468 () Int 0)
+  (define-fun n474 () Int 0)
+  (define-fun n15 () Int 0)
+  (define-fun n40 () Int 0)
+  (define-fun n51 () Int 0)
+  (define-fun n395 () Int 0)
+  (define-fun n41 () Int 0)
+  (define-fun n195 () Int 0)
+  (define-fun n390 () Int 0)
+  (define-fun n190 () Int 0)
+  (define-fun n191 () Int 0)
+  (define-fun n470 () Int 0)
+  (define-fun n475 () Int 0)
+  (define-fun n17 () Int 0)
+  (define-fun n14 () Int 1)
+  (define-fun n16 () Int 0)
+  (define-fun n20 () Int 1)
+  (define-fun n21 () Int 0)
+  (define-fun n22 () Int 0)
+  (define-fun n23 () Int 0)
+  (define-fun n254 () Int 0)
+  (define-fun n26 () Int 1)
+  (define-fun n27 () Int 0)
+  (define-fun n255 () Int 0)
+  (define-fun n28 () Int 0)
+  (define-fun n29 () Int 0)
+  (define-fun n32 () Int 1)
+  (define-fun n33 () Int 0)
+  (define-fun n34 () Int 0)
+  (define-fun n35 () Int 0)
+  (define-fun n38 () Int 1)
+  (define-fun n39 () Int 0)
+  (define-fun n44 () Int 1)
+  (define-fun n45 () Int 0)
+  (define-fun n454 () Int 0)
+  (define-fun n154 () Int 0)
+  (define-fun n155 () Int 0)
+  (define-fun n46 () Int 0)
+  (define-fun n47 () Int 0)
+  (define-fun n194 () Int 0)
+  (define-fun n274 () Int 0)
+  (define-fun n275 () Int 0)
+  (define-fun n495 () Int 0)
+  (define-fun )!1 () Int 0)
+  (define-fun 0 () Int 0)
+  (define-fun )!2 () Int 0)
+)
+
+real	0m0.021s
+user	0m0.015s
+sys	0m0.004s

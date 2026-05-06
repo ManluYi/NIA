@@ -1,0 +1,7 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-qxG9KS@0.txt ===
+timeout: 监视的命令已核心转储
+environment：行 10: 3512369 段错误               timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
+
+real	0m0.160s
+user	0m0.007s
+sys	0m0.003s
