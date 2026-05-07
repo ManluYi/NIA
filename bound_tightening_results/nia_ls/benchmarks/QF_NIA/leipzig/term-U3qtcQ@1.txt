@@ -66,6 +66,6 @@ reduced-model:
   (define-fun n335 () Int 0)
 )
 
-real	0m0.016s
-user	0m0.007s
-sys	0m0.006s
+real	0m0.012s
+user	0m0.006s
+sys	0m0.004s

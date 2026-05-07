@@ -62,6 +62,6 @@ reduced-model:
   (define-fun n375 () Int 0)
 )
 
-real	0m0.006s
-user	0m0.005s
-sys	0m0.000s
+real	0m0.005s
+user	0m0.001s
+sys	0m0.004s

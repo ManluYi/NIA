@@ -2,28 +2,8 @@
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-VvvOL1@4.txt
 warning: formula contains unsupported literals for nia::ls_solver
 objective(n11) = 1
-sat
+no_model_found_within_local_search_budget
 
-reduced-model:
-(model
-  (define-fun n53 () Int 3)
-  (define-fun n56 () Int 3)
-  (define-fun n13 () Int 1)
-  (define-fun n15 () Int 1)
-  (define-fun n29 () Int 1)
-  (define-fun n11 () Int 1)
-  (define-fun n5 () Int 1)
-  (define-fun n68 () Int 1)
-  (define-fun n7 () Int 1)
-  (define-fun n80 () Int 0)
-  (define-fun n47 () Int 3)
-  (define-fun n3 () Int 1)
-  (define-fun n0 () Int 0)
-  (define-fun n1 () Int 0)
-  (define-fun n86 () Int 2)
-  (define-fun n9 () Int 1)
-)
-
-real	20m15.003s
-user	20m14.438s
-sys	0m0.008s
+real	20m15.004s
+user	20m14.274s
+sys	0m0.101s

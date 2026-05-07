@@ -3,6 +3,6 @@ source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-5Luqnl
 warning: formula contains unsupported literals for nia::ls_solver
 no_model_found_within_local_search_budget
 
-real	20m15.005s
-user	20m14.322s
-sys	0m0.007s
+real	20m15.004s
+user	20m14.336s
+sys	0m0.000s

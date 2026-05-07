@@ -1,24 +1,8 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__consts4nt.t2_fixed__p18219_terminationG_0@2.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__consts4nt.t2_fixed__p18219_terminationG_0@2.txt
-objective(lam3n1) = -100000000
-sat
+objective(lam3n1) = -70445949
+no_model_found_within_local_search_budget
 
-reduced-model:
-(model
-  (define-fun Nl1x^01 () Int 1)
-  (define-fun RFN1_CT () Int 207)
-  (define-fun lam4n0 () Int 0)
-  (define-fun Nl1CT1 () Int 801)
-  (define-fun lam4n2 () Int 1)
-  (define-fun lam3n1 () Int (- 100000000))
-  (define-fun lam3n2 () Int 0)
-  (define-fun lam6n2 () Int 0)
-  (define-fun lam5n2 () Int 0)
-  (define-fun lam1n2 () Int 1)
-  (define-fun lam0n2 () Int 1)
-  (define-fun x^0 () Int (- 6777))
-)
-
-real	20m15.036s
-user	20m14.408s
-sys	0m0.004s
+real	20m15.004s
+user	20m14.389s
+sys	0m0.000s

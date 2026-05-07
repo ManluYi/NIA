@@ -116,6 +116,6 @@ reduced-model:
   (define-fun oldn^0 () Int 1)
 )
 
-real	0m40.040s
-user	0m40.027s
+real	0m42.388s
+user	0m42.381s
 sys	0m0.000s

@@ -45,6 +45,6 @@ reduced-model:
   (define-fun undef3 () Int (- 1))
 )
 
-real	0m43.299s
-user	0m43.273s
+real	0m42.308s
+user	0m42.284s
 sys	0m0.004s

@@ -2,6 +2,6 @@
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__refine_disj_problem.t2__p8545_terminationG_0@3.txt
 no_model_found_within_local_search_budget
 
-real	20m15.005s
-user	20m14.498s
-sys	0m0.004s
+real	20m15.004s
+user	20m14.382s
+sys	0m0.002s

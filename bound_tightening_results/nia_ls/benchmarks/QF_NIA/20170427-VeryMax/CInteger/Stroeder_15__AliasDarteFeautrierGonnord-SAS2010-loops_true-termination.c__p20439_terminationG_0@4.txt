@@ -3,5 +3,5 @@ source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CI
 no_model_found_within_local_search_budget
 
 real	20m15.003s
-user	20m14.713s
-sys	0m0.024s
+user	20m14.675s
+sys	0m0.000s

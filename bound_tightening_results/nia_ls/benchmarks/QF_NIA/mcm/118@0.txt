@@ -1,17 +1,8 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/mcm/118@0.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/mcm/118@0.txt
 objective(S2) = 1
-sat
-
-reduced-model:
-(model
-  (define-fun X19 () Int 19)
-  (define-fun S0 () Int 2)
-  (define-fun S1 () Int 1)
-  (define-fun S2 () Int 1)
-  (define-fun S3 () Int 2)
-)
+no_model_found_within_local_search_budget
 
 real	20m15.005s
-user	20m14.226s
-sys	0m0.035s
+user	20m14.278s
+sys	0m0.002s

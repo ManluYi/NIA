@@ -38,6 +38,6 @@ reduced-model:
   (define-fun n14 () Int 1)
 )
 
-real	0m0.016s
-user	0m0.013s
-sys	0m0.002s
+real	0m0.010s
+user	0m0.004s
+sys	0m0.005s

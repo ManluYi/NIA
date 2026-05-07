@@ -121,6 +121,6 @@ reduced-model:
   (define-fun lam22n8 () Int 0)
 )
 
-real	0m0.024s
-user	0m0.015s
-sys	0m0.006s
+real	0m0.019s
+user	0m0.017s
+sys	0m0.002s

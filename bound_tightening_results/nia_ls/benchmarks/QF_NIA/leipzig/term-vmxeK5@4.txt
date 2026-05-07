@@ -2,38 +2,8 @@
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-vmxeK5@4.txt
 warning: formula contains unsupported literals for nia::ls_solver
 objective(n13) = 1
-sat
-
-reduced-model:
-(model
-  (define-fun n31 () Int 1)
-  (define-fun n43 () Int 1)
-  (define-fun n13 () Int 1)
-  (define-fun n17 () Int 1)
-  (define-fun n58 () Int 0)
-  (define-fun n7 () Int 1)
-  (define-fun n73 () Int 0)
-  (define-fun n70 () Int 0)
-  (define-fun n57 () Int 0)
-  (define-fun n61 () Int 0)
-  (define-fun n11 () Int 1)
-  (define-fun n97 () Int 1)
-  (define-fun n15 () Int 1)
-  (define-fun n64 () Int 0)
-  (define-fun n23 () Int 1)
-  (define-fun n40 () Int 0)
-  (define-fun n3 () Int 1)
-  (define-fun n21 () Int 1)
-  (define-fun n79 () Int 0)
-  (define-fun n0 () Int 0)
-  (define-fun n1 () Int 0)
-  (define-fun n4 () Int 0)
-  (define-fun n5 () Int 0)
-  (define-fun n8 () Int 0)
-  (define-fun n9 () Int 0)
-  (define-fun n19 () Int 1)
-)
+no_model_found_within_local_search_budget
 
 real	20m15.002s
-user	20m14.652s
-sys	0m0.004s
+user	20m14.670s
+sys	0m0.000s

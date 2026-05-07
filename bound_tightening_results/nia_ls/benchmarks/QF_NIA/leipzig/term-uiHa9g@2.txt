@@ -18,9 +18,9 @@ reduced-model:
   (define-fun n41 () Int 0)
   (define-fun n10 () Int 0)
   (define-fun n16 () Int 0)
-  (define-fun n45 () Int 1)
-  (define-fun n65 () Int 1)
-  (define-fun n60 () Int 0)
+  (define-fun n45 () Int 0)
+  (define-fun n65 () Int 0)
+  (define-fun n60 () Int (- 1))
   (define-fun n15 () Int 1)
   (define-fun ( () Int 0)
   (define-fun + () Int 0)
@@ -32,9 +32,9 @@ reduced-model:
   (define-fun n4 () Int 0)
   (define-fun n5 () Int 0)
   (define-fun )!1 () Int 1)
-  (define-fun 0 () Int 10)
+  (define-fun 0 () Int 0)
 )
 
-real	0m0.005s
-user	0m0.001s
-sys	0m0.003s
+real	0m0.006s
+user	0m0.005s
+sys	0m0.000s

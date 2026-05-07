@@ -1,7 +1,7 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/UltimateLassoRanker/HarrisLalNoriRajamani-2010SAS-Fig2-alloca_unknown-termination.c.i_Iteration2_Lasso+nonterminationTemplate@1.txt ===
 timeout: the monitored command dumped core
-environment: line 10: 647996 Segmentation fault      timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
+environment: line 10: 1680166 Segmentation fault      timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
 
-real	0m0.144s
+real	0m0.128s
 user	0m0.003s
 sys	0m0.000s

@@ -1,42 +1,8 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__consts4nt.t2_fixed__p18241_terminationG_0@2.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__consts4nt.t2_fixed__p18241_terminationG_0@2.txt
-objective(lam1n2) = -100011935
-sat
-
-reduced-model:
-(model
-  (define-fun Nl1x^01 () Int 1)
-  (define-fun Nl1x^02 () Int (- 1))
-  (define-fun lam6n0 () Int 0)
-  (define-fun lam6n1 () Int 0)
-  (define-fun lam6n3 () Int 1)
-  (define-fun lam6n4 () Int 0)
-  (define-fun lam7n1 () Int 0)
-  (define-fun Nl1CT1 () Int 801)
-  (define-fun lam7n3 () Int 0)
-  (define-fun Nl1CT2 () Int (- 998))
-  (define-fun lam7n4 () Int 0)
-  (define-fun lam5n1 () Int 0)
-  (define-fun lam5n3 () Int 1)
-  (define-fun lam5n4 () Int (- 5))
-  (define-fun RFN1_CT () Int 998)
-  (define-fun lam8n4 () Int 0)
-  (define-fun lam8n1 () Int 0)
-  (define-fun lam8n3 () Int 0)
-  (define-fun x^0 () Int (- 801))
-  (define-fun lam1n2 () Int (- 100011935))
-  (define-fun lam1n3 () Int 0)
-  (define-fun lam1n4 () Int 72)
-  (define-fun lam0n0 () Int 1)
-  (define-fun lam0n1 () Int 0)
-  (define-fun lam0n2 () Int (- 1))
-  (define-fun lam0n4 () Int 0)
-  (define-fun lam0n3 () Int 1)
-  (define-fun lam2n1 () Int 0)
-  (define-fun lam2n3 () Int 0)
-  (define-fun lam2n4 () Int 1)
-)
+objective(lam1n2) = -81441495
+no_model_found_within_local_search_budget
 
 real	20m15.002s
-user	20m14.687s
-sys	0m0.000s
+user	20m14.853s
+sys	0m0.004s

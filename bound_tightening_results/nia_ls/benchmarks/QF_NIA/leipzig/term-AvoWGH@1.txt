@@ -2,25 +2,8 @@
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-AvoWGH@1.txt
 warning: formula contains unsupported literals for nia::ls_solver
 objective(n9) = 1
-sat
-
-reduced-model:
-(model
-  (define-fun n16 () Int 23680)
-  (define-fun n19 () Int 23680)
-  (define-fun n5 () Int 1)
-  (define-fun n34 () Int 20)
-  (define-fun n31 () Int 20)
-  (define-fun n9 () Int 1)
-  (define-fun n11 () Int 1)
-  (define-fun n30 () Int 10)
-  (define-fun n46 () Int 20)
-  (define-fun n13 () Int 23680)
-  (define-fun n3 () Int 1)
-  (define-fun n1 () Int 1)
-  (define-fun n7 () Int 1)
-)
+no_model_found_within_local_search_budget
 
 real	20m15.002s
-user	20m14.932s
+user	20m14.730s
 sys	0m0.000s

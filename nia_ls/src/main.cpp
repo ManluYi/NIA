@@ -167,7 +167,17 @@ int main(int argc, char* argv[]) {
         }
 
         const bool sat = solver.local_search();
-        if (!sat) {
+        const bool interrupted = nia::stop_requested();
+        if (interrupted || !sat) {
+            if (solver._has_best_feasible_solution) {
+                solver.up_bool_vars();
+                if (!objective_name.empty()) {
+                    std::string query_name = objective_name;
+                    std::string objective_value;
+                    solver.print_var_solution(query_name, objective_value);
+                    std::cout << "objective(" << objective_name << ") = " << objective_value << "\n";
+                }
+            }
             std::cout << "no_model_found_within_local_search_budget\n";
             return 0;
         }
@@ -193,3 +203,4 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 }
+

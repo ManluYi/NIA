@@ -4,5 +4,5 @@ warning: formula contains unsupported literals for nia::ls_solver
 no_model_found_within_local_search_budget
 
 real	20m15.002s
-user	20m14.883s
-sys	0m0.004s
+user	20m14.960s
+sys	0m0.000s

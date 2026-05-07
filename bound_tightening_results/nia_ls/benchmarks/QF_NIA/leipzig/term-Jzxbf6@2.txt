@@ -60,6 +60,6 @@ reduced-model:
   (define-fun n2023 () Int 0)
 )
 
-real	0m0.044s
-user	0m0.024s
-sys	0m0.017s
+real	0m0.040s
+user	0m0.020s
+sys	0m0.018s

@@ -2,6 +2,6 @@
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__hqr.t2__p1788_edge_closing_0@0.txt
 no_model_found_within_local_search_budget
 
-real	20m15.020s
-user	20m14.059s
-sys	0m0.098s
+real	20m15.016s
+user	20m13.946s
+sys	0m0.091s

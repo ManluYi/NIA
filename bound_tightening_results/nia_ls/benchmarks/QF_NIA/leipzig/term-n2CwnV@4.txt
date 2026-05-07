@@ -65,6 +65,6 @@ reduced-model:
   (define-fun 0 () Int 0)
 )
 
-real	0m0.021s
-user	0m0.019s
-sys	0m0.000s
+real	0m0.018s
+user	0m0.008s
+sys	0m0.010s

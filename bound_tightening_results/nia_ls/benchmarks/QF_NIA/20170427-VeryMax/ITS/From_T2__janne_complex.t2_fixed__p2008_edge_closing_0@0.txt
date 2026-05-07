@@ -106,6 +106,6 @@ reduced-model:
   (define-fun FV_b5^0_2 () Int 0)
 )
 
-real	0m0.012s
-user	0m0.002s
-sys	0m0.009s
+real	0m0.013s
+user	0m0.007s
+sys	0m0.005s

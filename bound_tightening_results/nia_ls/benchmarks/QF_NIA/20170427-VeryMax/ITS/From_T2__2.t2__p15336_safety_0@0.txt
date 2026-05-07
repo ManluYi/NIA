@@ -57,6 +57,6 @@ reduced-model:
   (define-fun undef29 () Int 0)
 )
 
-real	0m0.025s
-user	0m0.020s
-sys	0m0.003s
+real	0m0.015s
+user	0m0.011s
+sys	0m0.004s

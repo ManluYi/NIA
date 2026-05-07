@@ -1,9 +1,21 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000170.cvc.2@2.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000170.cvc.2@2.txt
 warning: formula contains unsupported literals for nia::ls_solver
-timeout: the monitored command dumped core
-environment: line 10: 633351 Segmentation fault      timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
+objective(P_5) = -3221225280
+sat
 
-real	0m0.142s
-user	0m0.003s
+reduced-model:
+(model
+  (define-fun P_2 () Int 0)
+  (define-fun P_3 () Int 0)
+  (define-fun P_4 () Int 0)
+  (define-fun P_5 () Int (- 3221225280))
+  (define-fun P_6 () Int 0)
+  (define-fun P_8 () Int 0)
+  (define-fun P_9 () Int 0)
+  (define-fun P_10 () Int 0)
+)
+
+real	7m10.531s
+user	7m10.412s
 sys	0m0.000s

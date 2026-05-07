@@ -5,7 +5,7 @@ sat
 
 reduced-model:
 (model
-  (define-fun Nl3__const_10^01 () Int 1)
+  (define-fun Nl3__const_10^01 () Int 0)
   (define-fun Nl3__const_12^01 () Int 0)
   (define-fun Nl3__const_30^01 () Int (- 1))
   (define-fun Nl3__const_5^01 () Int 0)
@@ -504,6 +504,6 @@ reduced-model:
   (define-fun lam114n1 () Int 0)
 )
 
-real	0m0.262s
+real	0m0.258s
 user	0m0.246s
-sys	0m0.016s
+sys	0m0.012s

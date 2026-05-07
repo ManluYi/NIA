@@ -37,6 +37,6 @@ reduced-model:
   (define-fun FV_main_y_2 () Int 2)
 )
 
-real	0m0.005s
-user	0m0.001s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.003s
+sys	0m0.000s

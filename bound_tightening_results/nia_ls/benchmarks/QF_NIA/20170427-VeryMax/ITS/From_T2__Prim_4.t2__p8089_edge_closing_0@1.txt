@@ -353,5 +353,5 @@ reduced-model:
 )
 
 real	0m0.034s
-user	0m0.033s
-sys	0m0.000s
+user	0m0.025s
+sys	0m0.008s

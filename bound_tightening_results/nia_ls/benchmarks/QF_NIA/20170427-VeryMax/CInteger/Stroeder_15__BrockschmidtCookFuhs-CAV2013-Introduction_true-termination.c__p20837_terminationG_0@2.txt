@@ -1,7 +1,8 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Stroeder_15__BrockschmidtCookFuhs-CAV2013-Introduction_true-termination.c__p20837_terminationG_0@2.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Stroeder_15__BrockschmidtCookFuhs-CAV2013-Introduction_true-termination.c__p20837_terminationG_0@2.txt
+objective(Nl2CT1) = 0
 no_model_found_within_local_search_budget
 
-real	20m15.005s
-user	20m14.719s
-sys	0m0.000s
+real	20m15.002s
+user	20m14.947s
+sys	0m0.008s

@@ -2,6 +2,6 @@
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_AProVE_2014__CountMetaListRec.jar-obl-9__p28223_terminationG_0@0.txt
 no_model_found_within_local_search_budget
 
-real	20m15.004s
-user	20m14.526s
-sys	0m0.000s
+real	20m15.005s
+user	20m14.460s
+sys	0m0.007s

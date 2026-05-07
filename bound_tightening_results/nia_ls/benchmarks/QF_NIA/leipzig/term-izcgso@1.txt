@@ -50,6 +50,6 @@ reduced-model:
   (define-fun n32 () Int 1)
 )
 
-real	0m0.007s
+real	0m0.006s
 user	0m0.006s
 sys	0m0.000s

@@ -20,6 +20,6 @@ reduced-model:
   (define-fun mux_I_92737 () Int 0)
 )
 
-real	0m0.006s
-user	0m0.003s
+real	0m0.008s
+user	0m0.005s
 sys	0m0.002s

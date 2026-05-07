@@ -2,6 +2,6 @@
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_AProVE_2014__flip_rec.jar-obl-8__p29672_terminationG_0@2.txt
 no_model_found_within_local_search_budget
 
-real	20m15.035s
-user	20m14.409s
-sys	0m0.005s
+real	20m15.004s
+user	20m14.363s
+sys	0m0.074s

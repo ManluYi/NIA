@@ -1,9 +1,24 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000135.cvc.1@3.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000135.cvc.1@3.txt
 warning: formula contains unsupported literals for nia::ls_solver
-timeout: 监视的命令已核心转储
-environment：行 10: 3267908 段错误               timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
+objective(P_5) = -2818572864
+sat
 
-real	0m0.146s
-user	0m0.004s
-sys	0m0.005s
+reduced-model:
+(model
+  (define-fun P_2 () Int 0)
+  (define-fun P_3 () Int 0)
+  (define-fun P_4 () Int 0)
+  (define-fun P_5 () Int (- 2818572864))
+  (define-fun P_6 () Int 0)
+  (define-fun P_7 () Int 0)
+  (define-fun P_8 () Int 0)
+  (define-fun P_9 () Int 0)
+  (define-fun mux_I_88067 () Int 0)
+  (define-fun mux_I_88082 () Int 0)
+  (define-fun mux_I_88074 () Int 0)
+)
+
+real	6m36.856s
+user	6m36.670s
+sys	0m0.002s

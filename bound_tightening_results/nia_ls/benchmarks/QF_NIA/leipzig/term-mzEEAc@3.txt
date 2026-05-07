@@ -1,7 +1,7 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-mzEEAc@3.txt ===
 timeout: 监视的命令已核心转储
-environment：行 10: 3277675 段错误               timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
+environment：行 10: 3902180 段错误               timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
 
-real	0m0.151s
-user	0m0.006s
-sys	0m0.006s
+real	0m0.156s
+user	0m0.010s
+sys	0m0.003s

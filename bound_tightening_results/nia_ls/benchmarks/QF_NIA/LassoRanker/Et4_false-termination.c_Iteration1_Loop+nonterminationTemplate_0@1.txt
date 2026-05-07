@@ -32,6 +32,6 @@ reduced-model:
   (define-fun honda_ULTIMATE.start_main_~b~2 () Int 10)
 )
 
-real	0m0.009s
-user	0m0.005s
-sys	0m0.003s
+real	0m0.007s
+user	0m0.003s
+sys	0m0.004s

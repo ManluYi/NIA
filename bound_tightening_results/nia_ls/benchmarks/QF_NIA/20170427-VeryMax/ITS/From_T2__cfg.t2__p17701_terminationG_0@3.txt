@@ -1,7 +1,8 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__cfg.t2__p17701_terminationG_0@3.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__cfg.t2__p17701_terminationG_0@3.txt
+objective(Nl1CT2) = 0
 no_model_found_within_local_search_budget
 
-real	20m15.034s
-user	20m14.441s
-sys	0m0.006s
+real	20m15.005s
+user	20m14.362s
+sys	0m0.069s

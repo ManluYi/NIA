@@ -138,6 +138,6 @@ reduced-model:
   (define-fun lam3n0 () Int 0)
 )
 
-real	0m0.187s
+real	0m0.186s
 user	0m0.185s
 sys	0m0.000s

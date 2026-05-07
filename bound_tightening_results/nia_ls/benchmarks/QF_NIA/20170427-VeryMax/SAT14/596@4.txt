@@ -1,21 +1,8 @@
 === /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/SAT14/596@4.txt ===
 source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/SAT14/596@4.txt
 objective(lam0n0) = 0
-sat
+no_model_found_within_local_search_budget
 
-reduced-model:
-(model
-  (define-fun lam1n3 () Int 1)
-  (define-fun lam0n6 () Int 1)
-  (define-fun lam0n7 () Int 0)
-  (define-fun lam1n7 () Int 0)
-  (define-fun global_invc99_3 () Int (- 6))
-  (define-fun global_V1_99 () Int (- 7))
-  (define-fun lam0n0 () Int 0)
-  (define-fun lam0n5 () Int 1)
-  (define-fun lam1n6 () Int 0)
-)
-
-real	20m15.003s
-user	20m14.503s
+real	20m15.004s
+user	20m14.407s
 sys	0m0.008s

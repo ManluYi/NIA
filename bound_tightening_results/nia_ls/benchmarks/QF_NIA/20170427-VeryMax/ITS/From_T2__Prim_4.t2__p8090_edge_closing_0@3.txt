@@ -520,6 +520,6 @@ reduced-model:
   (define-fun lam84n7 () Int 0)
 )
 
-real	0m0.051s
-user	0m0.036s
-sys	0m0.014s
+real	0m0.048s
+user	0m0.034s
+sys	0m0.013s

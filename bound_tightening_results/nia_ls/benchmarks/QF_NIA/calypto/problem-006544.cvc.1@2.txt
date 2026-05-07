@@ -30,6 +30,6 @@ reduced-model:
   (define-fun P_23 () Int 0)
 )
 
-real	0m0.011s
-user	0m0.001s
-sys	0m0.008s
+real	0m0.009s
+user	0m0.006s
+sys	0m0.002s

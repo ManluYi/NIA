@@ -195,6 +195,6 @@ reduced-model:
   (define-fun lam13n19 () Int (- 1))
 )
 
-real	0m0.119s
-user	0m0.119s
-sys	0m0.000s
+real	0m0.120s
+user	0m0.115s
+sys	0m0.004s

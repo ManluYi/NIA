@@ -50,6 +50,6 @@ reduced-model:
   (define-fun x^0 () Int (- 1))
 )
 
-real	0m27.229s
-user	0m27.208s
-sys	0m0.006s
+real	0m27.476s
+user	0m27.463s
+sys	0m0.000s
