@@ -1,0 +1,9 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000157.cvc.1@0.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000157.cvc.1@0.txt
+warning: formula contains unsupported literals for nia::ls_solver
+timeout: 监视的命令已核心转储
+environment：行 10: 3267933 段错误               timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
+
+real	0m0.148s
+user	0m0.006s
+sys	0m0.003s

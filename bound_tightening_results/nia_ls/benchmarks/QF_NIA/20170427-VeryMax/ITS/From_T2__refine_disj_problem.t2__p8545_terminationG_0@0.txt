@@ -1,0 +1,59 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__refine_disj_problem.t2__p8545_terminationG_0@0.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_T2__refine_disj_problem.t2__p8545_terminationG_0@0.txt
+objective(lam7n0) = -100080481
+sat
+
+reduced-model:
+(model
+  (define-fun Nl2__disjvr_0^01 () Int 0)
+  (define-fun Nl2x^01 () Int 0)
+  (define-fun Nl2y^01 () Int 0)
+  (define-fun Nl2__disjvr_0^02 () Int 1)
+  (define-fun Nl2x^02 () Int 0)
+  (define-fun Nl2y^02 () Int 1)
+  (define-fun Nl2__disjvr_0^03 () Int (- 1))
+  (define-fun Nl2x^03 () Int 0)
+  (define-fun Nl2y^03 () Int 0)
+  (define-fun Nl2CT1 () Int (- 1))
+  (define-fun lam10n3 () Int 0)
+  (define-fun Nl2CT2 () Int 0)
+  (define-fun lam10n4 () Int 1)
+  (define-fun Nl2CT3 () Int 1)
+  (define-fun lam10n5 () Int 1)
+  (define-fun lam7n3 () Int (- 2))
+  (define-fun lam7n4 () Int 0)
+  (define-fun lam7n5 () Int 0)
+  (define-fun lam7n0 () Int (- 100080481))
+  (define-fun RFN1_CT () Int 3)
+  (define-fun RFN1_y^0 () Int 0)
+  (define-fun lam8n0 () Int 1)
+  (define-fun lam8n3 () Int 0)
+  (define-fun lam8n4 () Int 0)
+  (define-fun lam8n5 () Int 0)
+  (define-fun lam9n3 () Int 0)
+  (define-fun lam9n4 () Int 1)
+  (define-fun lam9n5 () Int 1)
+  (define-fun lam10n2 () Int 0)
+  (define-fun x^0 () Int 2)
+  (define-fun y^0 () Int (- 1))
+  (define-fun lam3n3 () Int 0)
+  (define-fun lam3n4 () Int 0)
+  (define-fun lam3n5 () Int 1)
+  (define-fun lam0n0 () Int 0)
+  (define-fun lam0n1 () Int 0)
+  (define-fun lam0n3 () Int 2)
+  (define-fun lam0n4 () Int 0)
+  (define-fun lam0n5 () Int 0)
+  (define-fun lam2n3 () Int 0)
+  (define-fun lam2n4 () Int 1)
+  (define-fun lam2n5 () Int 0)
+  (define-fun lam1n5 () Int 0)
+  (define-fun lam1n3 () Int 1)
+  (define-fun lam1n4 () Int 0)
+  (define-fun lam0n2 () Int 0)
+  (define-fun __disjvr_0^0 () Int 1)
+)
+
+real	20m15.005s
+user	20m14.495s
+sys	0m0.003s
