@@ -1,7 +1,0 @@
-=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Ton_Chanh_15__2Nested_false-termination.c__p26568_edge_closing_0@4.txt ===
-source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Ton_Chanh_15__2Nested_false-termination.c__p26568_edge_closing_0@4.txt
-no_model_found_within_local_search_budget
-
-real	20m15.011s
-user	20m14.341s
-sys	0m0.074s

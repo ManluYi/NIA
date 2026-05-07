@@ -1,9 +1,0 @@
-=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000170.cvc.2@2.txt ===
-source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/calypto/problem-000170.cvc.2@2.txt
-warning: formula contains unsupported literals for nia::ls_solver
-timeout: the monitored command dumped core
-environment: line 10: 633351 Segmentation fault      timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
-
-real	0m0.142s
-user	0m0.003s
-sys	0m0.000s

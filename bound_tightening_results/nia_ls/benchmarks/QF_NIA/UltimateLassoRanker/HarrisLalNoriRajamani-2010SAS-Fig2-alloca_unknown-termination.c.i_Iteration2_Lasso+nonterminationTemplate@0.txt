@@ -1,7 +1,0 @@
-=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/UltimateLassoRanker/HarrisLalNoriRajamani-2010SAS-Fig2-alloca_unknown-termination.c.i_Iteration2_Lasso+nonterminationTemplate@0.txt ===
-timeout: 监视的命令已核心转储
-environment：行 10: 3278148 段错误               timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
-
-real	0m0.192s
-user	0m0.003s
-sys	0m0.006s
