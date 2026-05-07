@@ -1,2 +1,0 @@
-source: convert_data/benchmarks/QF_NIA/20170427-VeryMax/ITS/From_AProVE_2014__CountMetaList.jar-obl-9__p28209_edge_closing_0@0.txt
-no_model_found_within_local_search_budget

@@ -1,0 +1,26 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-MT0pqd@4.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-MT0pqd@4.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(n29) = -1
+warning: objective is present but could not be tightened during local search
+sat
+
+reduced-model:
+(model
+  (define-fun n18 () Int 18)
+  (define-fun n33 () Int 9)
+  (define-fun n35 () Int 3)
+  (define-fun n3 () Int 3)
+  (define-fun n1 () Int 3)
+  (define-fun n36 () Int 9)
+  (define-fun n24 () Int 9)
+  (define-fun n11 () Int 3)
+  (define-fun n23 () Int 3)
+  (define-fun n5 () Int 1)
+  (define-fun n8 () Int 3)
+  (define-fun n7 () Int 1)
+)
+
+real	0m9.615s
+user	0m9.602s
+sys	0m0.008s

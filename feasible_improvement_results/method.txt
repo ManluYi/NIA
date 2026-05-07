@@ -1,8 +1,0 @@
-进入 objective improvement mode
-也就是在当前可行解附近继续走，只接受：
-
-仍然保持 unsat=0，并且 objective 变小
-或者稍微放宽：
-
-objective 变小，但允许短暂出现少量 unsat，之后再修复
-这类方法类似“先找到可行解，再在可行域中局部下降”。

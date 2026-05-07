@@ -1,0 +1,54 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-qxG9KS@4.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-qxG9KS@4.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(n61) = -1
+warning: objective is present but could not be tightened during local search
+sat
+
+reduced-model:
+(model
+  (define-fun n48 () Int 1)
+  (define-fun n141 () Int 0)
+  (define-fun n27 () Int 1)
+  (define-fun n81 () Int 0)
+  (define-fun n25 () Int 1)
+  (define-fun n11 () Int 0)
+  (define-fun n22 () Int 0)
+  (define-fun n19 () Int 0)
+  (define-fun n35 () Int 0)
+  (define-fun n57 () Int 0)
+  (define-fun n68 () Int 0)
+  (define-fun n65 () Int 0)
+  (define-fun n56 () Int 0)
+  (define-fun n165 () Int 0)
+  (define-fun n171 () Int 0)
+  (define-fun n72 () Int 1)
+  (define-fun n15 () Int 0)
+  (define-fun n7 () Int 0)
+  (define-fun n177 () Int 0)
+  (define-fun n21 () Int 0)
+  (define-fun n135 () Int 1)
+  (define-fun n9 () Int 0)
+  (define-fun n5 () Int 0)
+  (define-fun n0 () Int 0)
+  (define-fun n1 () Int 0)
+  (define-fun n2 () Int 0)
+  (define-fun n3 () Int 0)
+  (define-fun n159 () Int 0)
+  (define-fun n12 () Int 0)
+  (define-fun n13 () Int 0)
+  (define-fun n17 () Int 0)
+  (define-fun n23 () Int 0)
+  (define-fun n198 () Int 0)
+  (define-fun n29 () Int 0)
+  (define-fun n192 () Int 0)
+  (define-fun n31 () Int 0)
+  (define-fun )!1 () Int 0)
+  (define-fun ( () Int 0)
+  (define-fun * () Int 0)
+  (define-fun -1 () Int 0)
+)
+
+real	0m0.010s
+user	0m0.010s
+sys	0m0.000s

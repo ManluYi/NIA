@@ -1,0 +1,28 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/UltimateLassoRanker/PodelskiRybalchenko-2004VMCAI-Ex2-alloca_false-termination.c.i_Iteration1_Lasso+nonterminationTemplate@4.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/UltimateLassoRanker/PodelskiRybalchenko-2004VMCAI-Ex2-alloca_false-termination.c.i_Iteration1_Lasso+nonterminationTemplate@4.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(|init_main_#t~mem3|) = -1
+warning: objective is present but could not be tightened during local search
+sat
+
+reduced-model:
+(model
+  (define-fun honda_main_~x~2.offset () Int 0)
+  (define-fun honda_main_~x~2.base () Int (- 1))
+  (define-fun init_main_#t~mem3 () Int 0)
+  (define-fun honda_main_#t~mem3 () Int 0)
+  (define-fun init_main_#t~mem4 () Int 0)
+  (define-fun honda_main_#t~mem4 () Int 0)
+  (define-fun honda_#NULL.base () Int 0)
+  (define-fun honda_#NULL.offset () Int 0)
+  (define-fun old(#valid) () Int 0)
+  (define-fun main_~x~2.base) () Int 0)
+  (define-fun 1 () Int 0)
+  (define-fun 0) () Int 0)
+  (define-fun 0 () Int 0)
+  (define-fun lambda () Int 0)
+)
+
+real	0m0.008s
+user	0m0.001s
+sys	0m0.007s

@@ -1,0 +1,49 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Ton_Chanh_15__2Nested_false-termination.c__p26532_terminationG_0@1.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/20170427-VeryMax/CInteger/Ton_Chanh_15__2Nested_false-termination.c__p26532_terminationG_0@1.txt
+objective(lam2n1) = 0
+sat
+
+reduced-model:
+(model
+  (define-fun Nl2main_x1 () Int 1)
+  (define-fun Nl2main_y1 () Int 1)
+  (define-fun Nl2main_x2 () Int 0)
+  (define-fun Nl2main_y2 () Int 0)
+  (define-fun Nl2main_x3 () Int 0)
+  (define-fun Nl2main_y3 () Int 0)
+  (define-fun Nl2CT1 () Int 1)
+  (define-fun lam10n1 () Int 0)
+  (define-fun Nl2CT2 () Int 0)
+  (define-fun lam10n2 () Int 0)
+  (define-fun Nl2CT3 () Int (- 1))
+  (define-fun lam10n3 () Int 0)
+  (define-fun lam8n1 () Int 1)
+  (define-fun lam8n2 () Int 0)
+  (define-fun lam8n3 () Int 0)
+  (define-fun lam7n1 () Int 2)
+  (define-fun lam7n2 () Int 4)
+  (define-fun lam7n3 () Int 0)
+  (define-fun lam9n1 () Int 0)
+  (define-fun lam9n2 () Int 0)
+  (define-fun lam9n3 () Int 0)
+  (define-fun RFN1_CT () Int 1)
+  (define-fun undef3 () Int 0)
+  (define-fun lam3n1 () Int 0)
+  (define-fun lam3n2 () Int 0)
+  (define-fun lam3n3 () Int 1)
+  (define-fun lam0n1 () Int 0)
+  (define-fun lam0n2 () Int 0)
+  (define-fun lam0n3 () Int (- 2))
+  (define-fun lam2n1 () Int 0)
+  (define-fun lam2n2 () Int 1)
+  (define-fun lam2n3 () Int 0)
+  (define-fun lam1n1 () Int 2)
+  (define-fun lam1n2 () Int 0)
+  (define-fun lam1n3 () Int 0)
+  (define-fun lam0n0 () Int 0)
+  (define-fun undef4 () Int (- 1))
+)
+
+real	20m15.002s
+user	20m14.940s
+sys	0m0.000s

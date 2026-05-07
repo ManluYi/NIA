@@ -1,0 +1,27 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-eBQlfQ@1.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-eBQlfQ@1.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(n61) = 0
+sat
+
+reduced-model:
+(model
+  (define-fun n61 () Int 0)
+  (define-fun n3 () Int 0)
+  (define-fun n11 () Int 0)
+  (define-fun n55 () Int 0)
+  (define-fun n7 () Int 0)
+  (define-fun n9 () Int 0)
+  (define-fun n45 () Int 0)
+  (define-fun n46 () Int 0)
+  (define-fun n34 () Int 1)
+  (define-fun n40 () Int 0)
+  (define-fun n15 () Int 0)
+  (define-fun n1 () Int 0)
+  (define-fun n4 () Int 0)
+  (define-fun n5 () Int 0)
+)
+
+real	20m15.004s
+user	20m14.424s
+sys	0m0.004s

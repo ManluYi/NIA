@@ -1,0 +1,7 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-OwnULw@2.txt ===
+timeout: the monitored command dumped core
+environment: line 10: 1125405 Segmentation fault      timeout --foreground --signal=SIGINT --kill-after="${KILL_AFTER_SECONDS}s" "${HARD_TIMEOUT_SECONDS}s" stdbuf -oL -eL "$SOLVER" "$f"
+
+real	0m0.131s
+user	0m0.001s
+sys	0m0.004s

@@ -1,0 +1,32 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-F85Fh4@4.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/leipzig/term-F85Fh4@4.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(n51) = -1
+warning: objective is present but could not be tightened during local search
+sat
+
+reduced-model:
+(model
+  (define-fun n35 () Int 0)
+  (define-fun n71 () Int 0)
+  (define-fun n3 () Int 1)
+  (define-fun n5 () Int 1)
+  (define-fun n15 () Int 1)
+  (define-fun n17 () Int 0)
+  (define-fun n98 () Int 0)
+  (define-fun n62 () Int 0)
+  (define-fun n9 () Int 1)
+  (define-fun n74 () Int 0)
+  (define-fun n1 () Int 1)
+  (define-fun n13 () Int 1)
+  (define-fun n59 () Int 1)
+  (define-fun n7 () Int 1)
+  (define-fun n11 () Int 1)
+  (define-fun n50 () Int 1)
+  (define-fun )!1 () Int 1)
+  (define-fun 0 () Int 0)
+)
+
+real	0m0.009s
+user	0m0.006s
+sys	0m0.003s

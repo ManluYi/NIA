@@ -1,0 +1,44 @@
+=== /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/AProVE/aproveSMT1901896504511143320@4.txt ===
+source: /mnt/home/yimanlu/nia/convert_data/benchmarks/QF_NIA/AProVE/aproveSMT1901896504511143320@4.txt
+warning: formula contains unsupported literals for nia::ls_solver
+objective(b__31) = 1
+sat
+
+reduced-model:
+(model
+  (define-fun b__31 () Int 1)
+  (define-fun a__2 () Int 1)
+  (define-fun a__12 () Int 0)
+  (define-fun a__9 () Int 0)
+  (define-fun a__3 () Int 1)
+  (define-fun a__1 () Int 0)
+  (define-fun a__5 () Int 0)
+  (define-fun a__6 () Int 1)
+  (define-fun a__7 () Int 0)
+  (define-fun a__4 () Int 1)
+  (define-fun a__8 () Int 1)
+  (define-fun a__10 () Int 1)
+  (define-fun a__13 () Int 1)
+  (define-fun a__18 () Int 0)
+  (define-fun a__19 () Int 1)
+  (define-fun a__20 () Int 0)
+  (define-fun a__21 () Int 0)
+  (define-fun a__14 () Int 0)
+  (define-fun a__15 () Int 1)
+  (define-fun a__16 () Int 0)
+  (define-fun a__17 () Int 0)
+  (define-fun a__24 () Int 0)
+  (define-fun a__25 () Int 1)
+  (define-fun a__22 () Int 0)
+  (define-fun a__23 () Int 1)
+  (define-fun a__26 () Int 1)
+  (define-fun a__27 () Int 1)
+  (define-fun a__29 () Int 1)
+  (define-fun a__28 () Int 1)
+  (define-fun a__11 () Int 0)
+  (define-fun a__30 () Int 0)
+)
+
+real	20m15.004s
+user	20m14.433s
+sys	0m0.025s
